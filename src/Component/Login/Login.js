@@ -36,7 +36,8 @@ class Login extends Component {
     this.setState({ isLoading: true })
     myFirebase
       .auth()
-      .signInWithPopup(this.provider)
+     // .signInWithPopup(this.provider)
+    .signInWithEmailAndPassword("admin@nalasky.com", "alanistheowner")
       .then(async result => {
         let user = result.user
         if (user) {

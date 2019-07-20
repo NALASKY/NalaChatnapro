@@ -105,9 +105,9 @@ class Login extends Component {
       <div id="login_div" class="main-div">
      <input ref="email" type="email" placeholder="Email..." id="email_field" />
      <input ref="pass" type="password" placeholder="Password..." id="password_field" />
-     <button onClick={this.onLoginPress()} type="submit">Login to Account</button>
+     <button onClick={this.onLoginPress} type="submit">Login to Account</button>
       </div>
-      <button className="btnLogin" type="submit" onClick="{this.onLoginPress(2)}">
+      <button className="btnLogin" type="submit" onClick="{this.onLoginPress}">
           SIGN IN WITH GOOGLE
         </button>
       

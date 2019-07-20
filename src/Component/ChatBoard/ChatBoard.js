@@ -4,6 +4,7 @@ import ReactLoading from 'react-loading'
 import 'react-toastify/dist/ReactToastify.css'
 import { myFirestore, myStorage } from '../../Config/MyFirebase'
 import images from '../Themes/Images'
+import './ChatBoard.css'
 import { AppString } from './../Const'
 
 export default class ChatBoard extends Component {

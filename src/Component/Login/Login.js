@@ -37,7 +37,7 @@ class Login extends Component {
     myFirebase
       .auth()
      // .signInWithPopup(this.provider)
-    .signInWithEmailAndPassword("admin@nalasky.com", "alanistheowner")
+    .signInWithEmailAndPassword(this.refs.email.value, this.refs.pass.value)
       .then(async result => {
         let user = result.user
         if (user) {
@@ -104,6 +104,13 @@ class Login extends Component {
         <button className="btnLogin" type="submit" onClick={this.onLoginPress}>
           SIGN IN WITH GOOGLE
         </button>
+      
+      <div id="login_div" class="main-div">
+     <h3>Nalasky Vip Login</h3>
+     <input ref="email" type="email" placeholder="Email..." id="email_field" />
+     <input ref="pass" type="password" placeholder="Password..." id="password_field" />
+     <button onClick="{this.onLoginPress}" type="submit">Login to Account</button>
+      </div>
 
         {this.state.isLoading ? (
           <div className="viewLoading">

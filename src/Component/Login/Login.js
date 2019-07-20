@@ -36,7 +36,8 @@ class Login extends Component {
     this.setState({ isLoading: true })
     myFirebase
       .auth()
-      .signInAnonymously()
+      //.signInAnonymously()
+    .signInWithPopup(new firebase.auth.GoogleAuthProvider())
       .then(async result => {
         let user = result.user
         if (user) {
